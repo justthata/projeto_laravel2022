@@ -10,14 +10,14 @@ class FuncionarioController extends Controller
         return "Estou na classe FuncionarioController";
     }
 
-    public function infoFuncionario(){
-    $infoFuncionario = [
-        "nome"=>"Luan",
-        "idade"=>20,
-        "salario" =>50
-    ];
-        dd($infoFuncionario);
+    public function show(){
+        return view("funcionario",[
+            "nome"=>"Operario Junior",
+            "salario"=>2000
+        ]);
     }
+    
+    
 }
 
 

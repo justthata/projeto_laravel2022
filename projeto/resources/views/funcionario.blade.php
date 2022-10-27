@@ -9,5 +9,28 @@
 <body>
     <h1> Pagina Funcionário<h1>
     {{ date("d/m/Y") }}
+    <hr>
+    <p> Olá {{ $nome }} seu salario é {{ $salario}} </p>
+    
+    @php
+        $endereco = "Rua das Goiabas 23";
+        $frutas = ["Pitaya","Maracuja","Kiwi","Morango","Abacaxi"];
+    @endphp
+    {{-- Isso é um comentario usando sintaxe Blade--}}
+    @if ($salario <= 1000)
+        <p> Voce receberá um bonus de {{ $salario * 0.2}}dinheiros</p>
+        
+    @else
+        <p>Infelizmente voce não pode receber o bonus</p>
+        
+    @endif
+    
+    <ul>
+        @foreach ($frutas as $item)
+            <li>{{ $item }}</li>
+        @endforeach
+    </ul>
+
+
 </body>
 </html>
